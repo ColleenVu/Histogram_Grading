@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Histogram</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/histogram.css">
+    <script src="/js/calculate.js"></script>
+</head>
+
+<body onload="init()">
+
+    <div id="grid">
+
+        <header id="histogramtitle">
+            <h1>Histogram Generator</h1>
+        </header>
+
+        <div id="fileinput">
+            <input id="fileInputBtn" type="file" name="file">
+        </div>
+
+        <main id="content">
+
+            <section id="lowerbounds">
+
+                <h2>
+                    Lower Bounds
+                </h2>
+
+                <form id="LBform">
+
+                    <label class="LBlabel" id="LBMAX" for="MAX">MAX</label>
+                    <input type="text" class="LBinput" id="MAX" name="MAX" value="100"><br>
+
+                    <label class="LBlabel" id="LBAp" for="Ap">A+</label>
+                    <input type="text" class="LBinput" id="Ap" name="A+" value="95"><br>
+
+                    <label class="LBlabel" id="LBA" for="A">A</label>
+                    <input type="text" class="LBinput" id="A" name="A" value="90"><br>
+
+                    <label class="LBlabel" id="LBAm" for="Am">A-</label>
+                    <input type="text" class="LBinput" id="Am" name="A-" value="85"><br>
+
+                    <label class="LBlabel" id="LBBp" for="Bp">B+</label>
+                    <input type="text" class="LBinput" id="Bp" name="B+" value="80"><br>
+
+                    <label class="LBlabel" id="LBB" for="B">B</label>
+                    <input type="text" class="LBinput" id="B" name="B" value="75"><br>
+
+                    <label class="LBlabel" id="LBBm" for="Bm">B-</label>
+                    <input type="text" class="LBinput" id="Bm" name="B-" value="70"><br>
+
+                    <label class="LBlabel" id="LBCp" for="Cp">C+</label>
+                    <input type="text" class="LBinput" id="Cp" name="C+" value="65"><br>
+
+                    <label class="LBlabel" id="LBC" for="C">C</label>
+                    <input type="text" class="LBinput" id="C" name="C" value="60"><br>
+
+                    <label class="LBlabel" id="LBCm" for="Cm">C-</label>
+                    <input type="text" class="LBinput" id="Cm" name="C-" value="55"><br>
+
+                    <label class="LBlabel" id="LBD" for="D">D</label>
+                    <input type="text" class="LBinput" id="D" name="D" value="50"><br>
+
+                    <label class="LBlabel" id="LBF" for="F">F</label>
+                    <input type="text" class="LBinput" id="F" name="F" value="0"><br>
+                </form>
+
+                <aside id="lowerBoundMessage">
+                    <div id="msg"></div>
+                </aside>
+
+            </section>
+
+            <section id="histogram">
+                <h2>
+                    Histogram
+                </h2>
+
+                <div id="histoform">
+                    <p class="histoP" id="LBAp2">A+</p>
+                    <p class="histoclass" id="Ap2"></p>
+
+                    <p class="histoP" id="LBA2">A</p>
+                    <p class="histoclass" id="A2"></p>
+
+                    <p class="histoP" id="LBAm2">A-</p>
+                    <p class="histoclass" id="Am2"></p>
+
+                    <p class="histoP" id="LBBp2">B+</p>
+                    <p class="histoclass" id="Bp2"></p>
+
+                    <p class="histoP" id="LBB2">B</p>
+                    <p class="histoclass" id="B2"></p>
+
+                    <p class="histoP" id="LBBm2">B-</p>
+                    <p class="histoclass" id="Bm2"></p>
+
+                    <p class="histoP" id="LBCp2">C+</p>
+                    <p class="histoclass" id="Cp2"></p>
+
+                    <p class="histoP" id="LBC2">C</p>
+                    <p class="histoclass" id="C2"></p>
+
+                    <p class="histoP" id="LBCm2">C-</p>
+                    <p class="histoclass" id="Cm2"></p>
+
+                    <p class="histoP" id="LBD2">D</p>
+                    <p class="histoclass" id="D2"></p>
+
+                    <p class="histoP" id="LBF2">F</p>
+                    <p class="histoclass" id="F2"></p>
+                </div>
+
+            </section>
+
+
+            <section id="stats">
+                <h2>
+                    Stats
+                </h2>
+
+                <div id="statform">
+                    <p class="statP" id="highest">Highest</p>
+                    <p id="highestOutput">...</p>
+
+                    <p class="statP" id="lowest">Lowest</p>
+                    <p id="lowestOutput">...</p>
+
+                    <p class="statP" id="mean">Mean</p>
+                    <p id="meanOutput">...</p>
+
+                    <p class="statP" id="median">Median</p>
+                    <p id="medianOutput">...</p>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+</body>
+
+</html>
